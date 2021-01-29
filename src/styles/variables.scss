@@ -1,0 +1,22 @@
+// Global Variables such as colors, font, borders
+
+// colors
+$white-color: #fff;
+$black-color: #000;
+$background-color: wheat;
+$text-color: $black-color;
+$border-color: #dedede;
+
+// font
+$font-stack: "Courgette", cursive;
+$line-height: 1.5;
+$base-font-size: 16px;
+
+// Shadow
+$box-shadow: 5px 0 15px 0 rgba($black-color, 0.15);
+
+// Cards
+$card-width: 100%/4;
+$card-width-tablet: 100%/3;
+$card-width-mobile: 100%;
+$gutter: 10px;

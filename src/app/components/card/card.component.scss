@@ -1,0 +1,96 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.card {
+  box-shadow: $box-shadow;
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(stretch);
+  @include align-items(center);
+  height: 100%;
+  width: 100%;
+  background: $white-color;
+  font: inherit;
+  border-radius: 4px;
+  border: 2px solid rgba($white-color, 0);
+  &::after {
+    position: absolute;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    content: "";
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+  }
+  > div {
+    margin-bottom: 5px;
+    width: 100%;
+    min-height: 150px;
+    position: relative;
+    img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      position: relative;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 0;
+      padding-top: 120px;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: transform 0.5s, opacity 0.5s;
+      border: 1em solid;
+      border-color: rgba(202, 146, 41, 0.267) rgba(224, 203, 106, 0.533);
+      border-radius: 50%;
+      animation: spin 1s linear 50;
+      -ms-animation: none;
+      opacity: 1;
+    }
+  }
+  &:hover,
+  &:focus {
+    position: relative;
+    cursor: pointer;
+    &::after {
+      opacity: 1;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba($black-color, 0.7);
+      background-image: url("../../../assets/icons/zoom-in.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 60px;
+    }
+    img {
+      filter: brightness(0.6);
+      // Browser Specific
+      -webkit-filter: brightness(0.6);
+      -moz-filter: brightness(0.6);
+      -o-filter: brightness(0.6);
+      -ms-filter: brightness(0.6);
+    }
+  }
+}
+
+app-popover {
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
+  background-color: rgba($black-color, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  @extend %moveup;
+  z-index: 25;
+}

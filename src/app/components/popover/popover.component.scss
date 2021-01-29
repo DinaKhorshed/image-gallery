@@ -1,0 +1,76 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+[role="dialog"] {
+  background-color: $white-color;
+  text-align: center;
+  position: relative;
+  padding-top: 65px;
+  max-width: 90vw;
+  min-width: 50vw;
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: 4px;
+  box-shadow: $box-shadow;
+  @media screen and (min-width: 768px) {
+    max-width: 600px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 0;
+    padding-top: 120px;
+    top: calc(50% - 50px);
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s, opacity 0.5s;
+    border: 1em solid;
+    border-color: rgba(85, 59, 10, 0.904) rgba(224, 203, 106, 0.533);
+    border-radius: 50%;
+    animation: spin 1s linear 50;
+    -ms-animation: none;
+    opacity: 1;
+  }
+  img {
+    min-height: 300px;
+    position: relative;
+  }
+}
+.close {
+  position: absolute;
+  right: 20px;
+  top: 19px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  opacity: 0.5;
+  line-height: 0;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+  &:before {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    content: " ";
+    height: 28px;
+    width: 4px;
+    background-color: #333;
+    transform: rotate(45deg);
+  }
+  &:after {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    content: " ";
+    height: 28px;
+    width: 4px;
+    background-color: #333;
+    transform: rotate(-45deg);
+  }
+}

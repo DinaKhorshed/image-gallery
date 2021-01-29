@@ -1,0 +1,8 @@
+<button class="card" (click)="togglePopover(true)" aria-haspopup="dialog">
+  <div>
+    <img [src]="cardDetails.source" [alt]="cardDetails.alternativeText" loading="lazy" />
+  </div>
+  <h2>{{cardDetails.alternativeText}}</h2>
+</button>
+<app-popover *ngIf="showPopover" [popoverDetails]="cardDetails.popoverProperties" (showPopover)="togglePopover($event)">
+</app-popover>
