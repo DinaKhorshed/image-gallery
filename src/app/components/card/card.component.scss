@@ -32,6 +32,7 @@
       width: auto;
       height: auto;
       position: relative;
+      z-index: 5;
     }
     &:before {
       content: "";

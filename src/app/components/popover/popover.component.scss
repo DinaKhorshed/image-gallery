@@ -8,12 +8,13 @@
   padding-top: 65px;
   max-width: 90vw;
   min-width: 50vw;
-  max-height: 90vh;
+  max-height: 80vh;
   overflow: auto;
   border-radius: 4px;
   box-shadow: $box-shadow;
   @media screen and (min-width: 768px) {
     max-width: 600px;
+    max-height: 90vh;
   }
   &:before {
     content: "";
@@ -41,6 +42,7 @@
   img {
     min-height: 300px;
     position: relative;
+    z-index: 5;
   }
 }
 .close {
