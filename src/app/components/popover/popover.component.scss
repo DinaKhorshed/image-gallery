@@ -21,17 +21,22 @@
     width: 120px;
     height: 0;
     padding-top: 120px;
-    top: calc(50% - 50px);
+    top: 155px;
     left: 50%;
     opacity: 0;
     transform: translate(-50%, -50%);
     transition: transform 0.5s, opacity 0.5s;
     border: 1em solid;
-    border-color: rgba(85, 59, 10, 0.904) rgba(224, 203, 106, 0.533);
+    border-color: rgba(53, 6, 6, 0.74) rgba(224, 203, 106, 0.533);
     border-radius: 50%;
     animation: spin 1s linear 50;
-    -ms-animation: none;
+    -ms-animation: spin-ms 1s linear 50;
     opacity: 1;
+    @media screen and (max-width: 768) {
+      top: 105px;
+      width: 95px;
+      padding-top: 95px;
+    }
   }
   img {
     min-height: 300px;
@@ -40,37 +45,49 @@
 }
 .close {
   position: absolute;
-  right: 20px;
-  top: 19px;
-  width: 32px;
-  height: 32px;
-  border: none;
-  opacity: 0.5;
+  right: 11px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  border: 3px solid brown;
+  opacity: .5;
   line-height: 0;
   background: none;
   cursor: pointer;
+  text-align: center;
+  color: $white-color;
+  background-color: $background-color;
+  border-radius: 4px;
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
 
   &:hover {
     opacity: 1;
   }
   &:before {
     position: absolute;
-    left: 15px;
-    top: 0;
     content: " ";
     height: 28px;
     width: 4px;
-    background-color: #333;
     transform: rotate(45deg);
+    background-color: brown;
+    border-radius: 50%;
   }
   &:after {
     position: absolute;
-    left: 15px;
-    top: 0;
     content: " ";
     height: 28px;
     width: 4px;
-    background-color: #333;
+    background-color: brown;
+    border-radius: 50%;
     transform: rotate(-45deg);
   }
+  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    &::before,
+    &::after {
+      top: 4px;
+      left: 46%;
+    }
+ }
 }

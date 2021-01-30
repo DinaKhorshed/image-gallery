@@ -4,5 +4,5 @@
   </div>
   <h2>{{cardDetails.alternativeText}}</h2>
 </button>
-<app-popover *ngIf="showPopover" [popoverDetails]="cardDetails.popoverProperties" (showPopover)="togglePopover($event)">
+<app-popover *ngIf="showPopover" [popoverDetails]="cardDetails.popoverProperties" (showPopoverEmitter)="togglePopover($event)">
 </app-popover>

@@ -36,19 +36,19 @@
     &:before {
       content: "";
       position: absolute;
-      width: 120px;
+      width: 95px;
+      padding-top: 95px;
       height: 0;
-      padding-top: 120px;
       top: 50%;
       left: 50%;
       opacity: 0;
       transform: translate(-50%, -50%);
       transition: transform 0.5s, opacity 0.5s;
       border: 1em solid;
-      border-color: rgba(202, 146, 41, 0.267) rgba(224, 203, 106, 0.533);
+      border-color: rgba(53, 6, 6, 0.74) rgba(224, 203, 106, 0.533);
       border-radius: 50%;
       animation: spin 1s linear 50;
-      -ms-animation: none;
+      -ms-animation: spin-ms 1s linear 50;
       opacity: 1;
     }
   }
@@ -84,7 +84,7 @@ app-popover {
   @include flexbox;
   @include justify-content(center);
   @include align-items(center);
-  background-color: rgba($black-color, 0.4);
+  background-color: rgba($black-color, 0.6);
   position: fixed;
   top: 0;
   left: 0;

@@ -3,6 +3,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 
+// Global Styles
 * {
   box-sizing: border-box;
 }
@@ -12,6 +13,7 @@ html {
   height: 100%;
   font-size: $base-font-size;
   overflow: hidden;
+  margin: 0;
 }
 
 body {
@@ -23,6 +25,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 0 $gutter $gutter;
+  margin: 0;
 }
 
 h1 {

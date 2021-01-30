@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { PopoverComponent } from '../popover/popover.component';
 
 import { CardComponent } from './card.component';
 
@@ -8,7 +10,7 @@ describe('CardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CardComponent],
+      declarations: [CardComponent, PopoverComponent],
     }).compileComponents();
   });
 
@@ -18,7 +20,14 @@ describe('CardComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should set showPopover to true when card is clicked', () => {
+    component = fixture.componentInstance;
+    spyOn(component, 'togglePopover');
+    fixture.detectChanges();
+
+    fixture.debugElement
+      .query(By.css('button'))
+      .triggerEventHandler('click', { showPopover: true });
+    expect(component.togglePopover).toHaveBeenCalledWith(true);
   });
 });

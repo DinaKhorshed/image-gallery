@@ -93,7 +93,6 @@
             "styles": [
               "src/styles.scss"
             ],
-            "es5BrowserSupport": true,
             "scripts": []
           }
         },

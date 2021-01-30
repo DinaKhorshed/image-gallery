@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { PopoverComponent } from './popover.component';
 
@@ -18,7 +19,15 @@ describe('PopoverComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should have a close Button', () => {
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('button')).toHaveClass('close');
+  });
+
+  it('should call togglePopover when close button is clicked', () => {
+    spyOn(fixture.componentInstance, 'togglePopover');
+    fixture.detectChanges();
+    fixture.debugElement.query(By.css('button')).triggerEventHandler('click', {showPopover: false});
+    expect(component.togglePopover).toHaveBeenCalledWith(false);
   });
 });

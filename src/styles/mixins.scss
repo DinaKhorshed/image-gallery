@@ -206,3 +206,11 @@
     transform: translate(-50%, -50%) rotate(360deg) scale(1);
   }
 }
+@keyframes spin-ms {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
