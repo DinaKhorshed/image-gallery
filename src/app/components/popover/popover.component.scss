@@ -30,6 +30,7 @@
     border: 1em solid;
     border-color: rgba(53, 6, 6, 0.74) rgba(224, 203, 106, 0.533);
     border-radius: 50%;
+    z-index: 1;
     animation: spin 1s linear 50;
     -ms-animation: spin-ms 1s linear 50;
     opacity: 1;
@@ -42,7 +43,7 @@
   img {
     min-height: 300px;
     position: relative;
-    z-index: 5;
+    z-index: 15;
   }
 }
 .close {
@@ -64,7 +65,8 @@
   @include justify-content(center);
   @include align-items(center);
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 1;
   }
   &:before {
