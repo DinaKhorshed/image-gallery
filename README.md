@@ -1,27 +1,57 @@
-# ImageGallery
+# Image Gallery
+
+A very simple image gallery built using Angular 11 and SCSS,
+it doesn't use any third party plugins or frameworks,
+Just Html5, SCSS and Typescript.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
-## Development server
+## Demo
+Application is published as a [github page](https://dinakhorshed.github.io/image-gallery/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## How to run it locally?
 
-## Code scaffolding
+1. clone the project from [here]().
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Open project in your preferred terminal and run `npm i`.
 
-## Build
+3. To Start the project on http://localhost:4200/ run `npm run start` or `ng serve`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+4. For Code Linting run `npm run lint` or `ng lint`.
 
-## Running unit tests
+5. For Unit testing run  `npm run test` or `ng test`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Code Structure
 
-## Running end-to-end tests
+### Components
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Main Component
 
-## Further help
+- Contains main Logic (Please see Comments in the code).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Card Component
+
+- Child Component for card markup and functionality (Please see Comments in the code).
+
+#### PopOver Component
+
+- Nested component for popover markup and functionality
+
+### Interfaces
+
+#### Card Poperties Custom Data Type
+
+#### PopOver Properties Custom Data Type
+
+### Styles and assets
+
+#### variables.scss
+
+#### mixins.scss
+
+#### styles.scss
+
+#### Individual component scss files
+
+#### Zoom In SVG Icon
+
