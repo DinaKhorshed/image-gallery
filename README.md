@@ -11,7 +11,7 @@ Application is published as a [github page](https://dinakhorshed.github.io/image
 
 ## How to run it locally?
 
-1. clone the project from [here]().
+1. clone the project from [here](https://github.com/DinaKhorshed/image-gallery).
 
 2. Open project in your preferred terminal and run `npm i`.
 
